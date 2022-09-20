@@ -129,11 +129,11 @@ window.onload = wrap_img;
     <ul id="toc" class="section-nav">
 <li class="toc-entry toc-h1"><a href="#What-is-a-Method?">What is a Method? </a></li>
 <li class="toc-entry toc-h1"><a href="#Creating-a-Method">Creating a Method </a></li>
-<li class="toc-entry toc-h1"><a href="#Example-Code">Example Code </a></li>
 <li class="toc-entry toc-h1"><a href="#Calling-a-Method">Calling a Method </a></li>
 <li class="toc-entry toc-h1"><a href="#Example-Code">Example Code </a></li>
 <li class="toc-entry toc-h1"><a href="#Hack-1">Hack 1 </a></li>
 <li class="toc-entry toc-h1"><a href="#Hack-2">Hack 2 </a></li>
+<li class="toc-entry toc-h1"><a href="#Answers-to-the-Hacks">Answers to the Hacks </a></li>
 <li class="toc-entry toc-h1"><a href="#Additional-Resources">Additional Resources </a></li>
 </ul><!--
 #################################################
@@ -154,6 +154,7 @@ window.onload = wrap_img;
 <li>Function or sub-code that is associated with a class in object-oriented programming</li>
 <li>Can contain a set of codes that performs an action</li>
 <li>It can also take an input and return an output based on the user</li>
+<li>Runs only when called</li>
 </ul>
 
 </div>
@@ -174,36 +175,6 @@ window.onload = wrap_img;
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="Example-Code">
-<a class="anchor" href="#Example-Code" aria-hidden="true"><span class="octicon octicon-link"></span></a>Example Code<a class="anchor-link" href="#Example-Code"> </a>
-</h1>
-</div>
-</div>
-</div>
-    
-    
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ExampleMethod</span><span class="p">(){</span> <span class="c1">// ExampleMethod is the name of the method; static means that the method belongs to the Main class and not an object</span>
-        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hi!"</span><span class="p">);</span>
-    <span class="p">}</span>
-<span class="p">}</span>
-</pre></div>
-
-    </div>
-</div>
-</div>
-
-</div>
-    
-
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
@@ -233,20 +204,37 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
-    <span class="kd">static</span> <span class="kt">void</span> <span class="nf">ExampleMethod</span><span class="p">()</span> <span class="p">{</span>
-      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hello AP CSA!"</span><span class="p">);</span>
-    <span class="p">}</span>
-  
-    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
-      <span class="n">ExampleMethod</span><span class="p">();</span>
-    <span class="p">}</span>
-  <span class="p">}</span>
-  
-  <span class="c1">// Outputs "I just got executed!"</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="kd">class</span> <span class="nc">Example</span> <span class="p">{</span>
+    
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">hello</span> <span class="p">()</span> <span class="p">{</span>
+        
+        <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Hi Class! How are you?"</span><span class="p">);</span>
+    <span class="p">}</span> <span class="c1">// here, we defined the method called "hello," that we can later refer to and execute the code</span>
+
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span> 
+        <span class="n">Example</span> <span class="n">myExample</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Example</span><span class="p">();</span>
+        <span class="n">myExample</span><span class="p">.</span><span class="na">hello</span><span class="p">();</span>
+    <span class="p">}</span> <span class="c1">// we called the method through the .hello();</span>
+<span class="p">}</span>
+
+<span class="n">Example</span><span class="p">.</span><span class="na">main</span><span class="p">(</span><span class="kc">null</span><span class="p">);</span>
 </pre></div>
 
     </div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+<div class="output_area">
+
+<div class="output_subarea output_stream output_stdout output_text">
+<pre>Hi Class! How are you?
+</pre>
+</div>
+</div>
+
 </div>
 </div>
 
@@ -308,13 +296,27 @@ window.onload = wrap_img;
 
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-java"><pre><span></span><span class="kd">public</span> <span class="n">string</span> <span class="nf">myMethod</span><span class="p">(</span><span class="n">String</span> <span class="n">s</span><span class="p">,</span><span class="n">inti</span><span class="p">){</span>
-    <span class="n">String</span> <span class="n">r</span> <span class="o">=</span><span class="s">""</span><span class="p">;</span>
-    <span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">j</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span> <span class="n">j</span><span class="o">&lt;</span> <span class="n">s</span><span class="p">.</span><span class="na">length</span><span class="p">();</span> <span class="n">j</span><span class="o">++</span><span class="p">){</span>
-        <span class="n">r</span><span class="o">+=</span><span class="p">(</span><span class="kt">char</span><span class="p">)(</span><span class="n">s</span><span class="p">.</span><span class="na">charAt</span><span class="p">(</span><span class="n">j</span><span class="p">)</span><span class="o">+</span><span class="n">i</span><span class="p">);</span>
+<div class=" highlight hl-java"><pre><span></span><span class="kd">class</span> <span class="nc">Main</span> <span class="p">{</span>
+
+    <span class="c1">// create a method</span>
+    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">addNumbers</span><span class="p">(</span><span class="kt">int</span> <span class="n">a</span><span class="p">,</span> <span class="kt">int</span> <span class="n">b</span><span class="p">)</span> <span class="p">{</span>
+      <span class="kt">int</span> <span class="n">sum</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="n">b</span><span class="p">;</span>
+      <span class="c1">// return value</span>
+      <span class="k">return</span> <span class="n">sum</span><span class="p">;</span>
     <span class="p">}</span>
-    <span class="k">return</span> <span class="n">r</span><span class="p">;</span>
-<span class="p">}</span>
+  
+    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="p">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="p">)</span> <span class="p">{</span>
+      
+      <span class="kt">int</span> <span class="n">num1</span> <span class="o">=</span> <span class="mi">25</span><span class="p">;</span>
+      <span class="kt">int</span> <span class="n">num2</span> <span class="o">=</span> <span class="mi">15</span><span class="p">;</span>
+  
+      <span class="c1">// create an object of Main</span>
+      <span class="n">Main</span> <span class="n">obj</span> <span class="o">=</span> <span class="k">new</span> <span class="n">Main</span><span class="p">();</span>
+      <span class="c1">// calling method</span>
+      <span class="kt">int</span> <span class="n">result</span> <span class="o">=</span> <span class="n">obj</span><span class="p">.</span><span class="na">addNumbers</span><span class="p">(</span><span class="n">num1</span><span class="p">,</span> <span class="n">num2</span><span class="p">);</span>
+      <span class="n">System</span><span class="p">.</span><span class="na">out</span><span class="p">.</span><span class="na">println</span><span class="p">(</span><span class="s">"Sum is: "</span> <span class="o">+</span> <span class="n">result</span><span class="p">);</span>
+    <span class="p">}</span>
+  <span class="p">}</span>
 </pre></div>
 
     </div>
@@ -324,6 +326,20 @@ window.onload = wrap_img;
 </div>
     
 
+<div class="cell border-box-sizing text_cell rendered">
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h1 id="Answers-to-the-Hacks">
+<a class="anchor" href="#Answers-to-the-Hacks" aria-hidden="true"><span class="octicon octicon-link"></span></a>Answers to the Hacks<a class="anchor-link" href="#Answers-to-the-Hacks"> </a>
+</h1>
+<ol>
+<li>"myMethod()" </li>
+<li>The code created a method called addNumbers() that takes two parameters, a and b. The method is called and then a sum is outputted. </li>
+</ol>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing text_cell rendered">
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
