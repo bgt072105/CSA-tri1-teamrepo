@@ -1,9 +1,9 @@
 --- 
 toc: true
 layout: post
-description: Our discussion on PBL
+description: Our PBL Project
 categories: [markdown]
-title: PBL Plan
+title: PBL Outline
 ---
 # Team JEBH PBL Idea
 Since most of us have taken AP Physics C, we wanted to create an interactive website for us to refer back to. We hope to incorporate different equation calculators, practice problems, and websites that will assist us throughout the year and on the AP exam, while also showing our CS knowledge.
