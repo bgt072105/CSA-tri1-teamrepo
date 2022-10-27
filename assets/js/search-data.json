@@ -94,8 +94,6 @@
   
 
   
-
-  
   
 
   
@@ -105,7 +103,7 @@
   
 
   
-      ,"page11": {
+      ,"page10": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/robots.txt",
