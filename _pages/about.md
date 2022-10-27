@@ -4,10 +4,6 @@ title: About Us
 permalink: /about/
 ---
 
-![Scrum Board](scrumboard.png)
-
-This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
+![Scrum Board](/images/scrumboard.png)
 
 
-
-[^1]:a blogging platform that natively supports Jupyter notebooks in addition to other formats.
