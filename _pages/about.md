@@ -4,5 +4,5 @@ title: About Us
 permalink: /about/
 ---
 
-Hi
+!["Scrumboard"](../images/scrumboard.png)
 
