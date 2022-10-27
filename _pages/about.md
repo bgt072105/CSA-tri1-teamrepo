@@ -1,8 +1,10 @@
 ---
 layout: page
-title: About Me
+title: About Us
 permalink: /about/
 ---
+
+![Scrum Board](scrumboard.png)
 
 This website is powered by **[fastpages](https://github.com/fastai/fastpages)** [^1].
 
