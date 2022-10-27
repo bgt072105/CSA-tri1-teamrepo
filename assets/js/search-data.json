@@ -73,7 +73,18 @@
   
       ,"page1": {
           "title": "About Us",
-          "content": ".",
+          "content": ". .",
+          "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/about/",
+          "relUrl": "/about/",
+          "date": ""
+      }
+      
+  
+
+  
+      ,"page2": {
+          "title": "About Us",
+          "content": "&lt;!DOCTYPE html&gt; . &lt;/head&gt; ahsdfhaskldjhfakshdfklajhsdlkfhlkdhsklhflkahsdfa . .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/about/",
           "relUrl": "/about/",
           "date": ""
@@ -103,7 +114,7 @@
   
 
   
-      ,"page10": {
+      ,"page11": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/robots.txt",
