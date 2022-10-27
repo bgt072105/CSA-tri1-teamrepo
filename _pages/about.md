@@ -1,9 +1,14 @@
 ---
-layout: page
-title: About Us
-permalink: /about/
+layout: home
+search_exclude: true
+image: images/logo.png
 ---
 
-![Scrum Board](/images/scrumboard.png)
-
-
+<h1> About Us </h1>
+<p>
+Here is our team
+</p>
+<img src= "images/scrumboard.png" 
+  alt="Me!"
+/>
+<h1>Posts</h1>
