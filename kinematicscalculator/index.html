@@ -70,7 +70,6 @@ window.onload = wrap_img;
         <!DOCTYPE html>
 <html>
 <head>
-</body>
     <title> Kinematics Calculator </title>
     <style>
         input {
@@ -83,28 +82,29 @@ window.onload = wrap_img;
     </style>
 </head>
 <body>
-    <form name="formcalc">
-        Initial Velocity: <input type="text" name="txtnum1">
-        <br>
-        Acceleration: <input type="text" name="txtnum2">
-        <br>
-        Time: <input type="text" name="txtnum3">
-        <br>
-        Final Velocity: <input type="text" name="txtres">
-        <br>
-        <input type="button" value="Calculate!" onclick="sumValues()">
-    </form>
-    <script type="text/javascript">
-       function sumValues()
-       {
-        var num1, num2, res;
-        num1=Number(document.formcalc.txtnum1.value);
-        num2=Number(document.formcalc.txtnum2.value);
-        num3=Number(document.formcalc.txtnum3.value);
-        res=(num1)+(num2*num3);
-        document.formcalc.txtres.value=res;
-       } 
-    </script>
+    <div style="margin: auto; width: 300px; background-color: lightpink; padding: 10px;">
+        <form name="formcalc">
+            Initial Velocity: <input type="text" name="txtnum1">
+            <br>
+            Acceleration: <input type="text" name="txtnum2">
+            <br>
+            Time: <input type="text" name="txtnum3">
+            <br>
+            Final Velocity: <input type="text" name="txtres">
+            <br>
+            <input type="button" value="Calculate!" onclick="sumValues()">
+        </form>
+        <script type="text/javascript">
+           function sumValues()
+           {
+            var num1, num2, res;
+            num1=Number(document.formcalc.txtnum1.value);
+            num2=Number(document.formcalc.txtnum2.value);
+            num3=Number(document.formcalc.txtnum3.value);
+            res=(num1)+(num2*num3);
+            document.formcalc.txtres.value=res;
+           } 
+        </script> 
     </div>
 </body>
 </html>
