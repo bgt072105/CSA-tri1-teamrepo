@@ -11,13 +11,17 @@ search_exclude: true
     <style>
         title {
             display: "Velocity Calculator";
+            font-family: 'Lucida Sans';
         }
         input {
             padding: 5px;
             border-radius: 4px;
+            font-family: 'Lucida Sans';
         }
         label {
             font-weight: bold;
+            font-family: 'Lucida Sans';
+    
         }
     </style>
 </head>
@@ -54,7 +58,9 @@ search_exclude: true
 <br>
 <br>
 <br>
+<br>
 <h1> Displacement Calculator </h1>
+<br>
 <br>
 <body>
     <div style="margin: auto; width: 300px; background-color: rgb(233, 175, 207); float:left; padding: 10px;">
@@ -78,6 +84,38 @@ search_exclude: true
             num6=Number(document.formcalc.num6.value);
             result=(0.5*(num4+num5))*num6;
             document.formcalc.result.value=result;
+           } 
+        </script> 
+    </div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> Baby Equation </h1>
+<br>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(233, 175, 207); float:left; padding: 10px;">
+        <form name="formcalc">
+            Displacement: <input type="text" name="num7">
+            <br>
+            Time: <input type="text" name="num8">
+            <br>
+            Velocity: <input type="text" name="result2">
+            <br>
+            <input type="button" value="Calculate!" onclick="sumValues3()" >
+        </form>
+        <script type="text/javascript">
+           function sumValues3()
+           {
+            var num7, num7, result2;
+            num7=Number(document.formcalc.num7.value);
+            num8=Number(document.formcalc.num8.value);
+            result2=(num7 / num8);
+            document.formcalc.result.value=result2;
            } 
         </script> 
     </div>
