@@ -78,19 +78,19 @@ search_exclude: false
             <br>
             Time: <input type="text" name="num6">
             <br>
-            Displacement: <input type="text" name="result">
+            Displacement: <input type="text" name="txtresult">
             <br>
             <input type="button" value="Calculate!" onclick="sumValues2()" >
         </form>
         <script type="text/javascript">
            function sumValues2()
            {
-            var num4, num5, num6, result;
+            var num4, num5, num6, txtresult;
             num4=Number(document.formcalc.num4.value);
             num5=Number(document.formcalc.num5.value);
             num6=Number(document.formcalc.num6.value);
             result=(0.5*(num4+num5))*num6;
-            document.formcalc.result.value=result;
+            document.formcalc.txtresult.value=result;
            } 
         </script> 
     </div>
