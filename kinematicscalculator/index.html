@@ -119,6 +119,45 @@ window.onload = wrap_img;
         </script> 
     </div>
 </body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+    Displacement Calculator </h1>
+    </p>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(233, 175, 207); float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="formcalc2">
+            Initial Velocity: <input type="text" name="num4">
+            <br>
+            Final Velocity: <input type="text" name="num5">
+            <br>
+            Time: <input type="text" name="num6">
+            <br>
+            Displacement: <input type="text" name="result">
+            <br>
+            <input type="button" value="Calculate!" onclick="sumValues2()" >
+        </form>
+        <script type="text/javascript">
+           function sumValues2()
+           {
+            var num4, num5, num6, result;
+            num4=Number(document.formcalc.num4.value);
+            num5=Number(document.formcalc.num5.value);
+            num6=Number(document.formcalc.num6.value);
+            result=(0.5*(num4+num5))*num6;
+            document.formcalc.result.value=result;
+           } 
+        </script> 
+    </div>
+</body>
 </html>
       </div>
     </main><footer class="site-footer h-card">
