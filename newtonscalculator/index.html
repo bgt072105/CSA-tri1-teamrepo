@@ -129,26 +129,23 @@ window.onload = wrap_img;
 <br>
 <body>
     <div style="margin: auto; width: 300px; background-color: rgb(233, 175, 207); float:left; padding: 10px; font-style: Lucida Sans;">
-        <form name="netforce">
-            Force 1: <input type="text" name="force1">
+        <form name="secondlaw">
+            Net force: <input type="text" name="force4">
             <br>
-            Force 2: <input type="text" name="force2">
+            Mass of object: <input type="text" name="mass1">
             <br>
-            Force 3: <input type="text" name="force3">
+            Acceleration: <input type="text" name="acceleration1">
             <br>
-            Sum of Forces: <input type="text" name="sumforces">
-            <br>
-            <input type="button" value="Calculate!" onclick="sumForces()" >
+            <input type="button" value="Calculate!" onclick="findacceleration()" >
         </form>
         <script type="text/javascript">
-           function sumForces()
+           function findacceleration()
            {
-            var f1, f2, f3, forcesum;
-            f1=Number(document.netforce.force1.value);
-            f2=Number(document.netforce.force2.value);
-            f3=Number(document.netforce.force3.value);
-            forcesum=(f1+f2+f3);
-            document.netforce.sumforces.value=forcesum;
+            var f4, m, accelerationfinal;
+            f4=Number(document.secondlaw.force4.value);
+            m=Number(document.secondlaw.mass1.value);
+            accelerationfinal=(f4 / m);
+            document.secondlaw.acceleration1.value=accelerationfinal;
            } 
         </script> 
     </div>
