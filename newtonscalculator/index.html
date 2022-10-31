@@ -126,6 +126,41 @@ window.onload = wrap_img;
 <br>
 <br>
 <br>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: rgb(233, 175, 207); float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="netforce">
+            Force 1: <input type="text" name="force1">
+            <br>
+            Force 2: <input type="text" name="force2">
+            <br>
+            Force 3: <input type="text" name="force3">
+            <br>
+            Sum of Forces: <input type="text" name="sumforces">
+            <br>
+            <input type="button" value="Calculate!" onclick="sumForces()" >
+        </form>
+        <script type="text/javascript">
+           function sumForces()
+           {
+            var f1, f2, f3, forcesum;
+            f1=Number(document.netforce.force1.value);
+            f2=Number(document.netforce.force2.value);
+            f3=Number(document.netforce.force3.value);
+            forcesum=(f1+f2+f3);
+            document.netforce.sumforces.value=forcesum;
+           } 
+        </script> 
+    </div>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
 <h1> 
     <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
     Newton's Law Video </h1>
