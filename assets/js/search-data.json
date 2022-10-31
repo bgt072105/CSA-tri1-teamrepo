@@ -4,9 +4,9 @@
         "post0": {
             "title": "Kinematics",
             "content": "Key Vocabulary . Vocabulary Definition . Velocity | The rate at which an object changes it&#39;s position | . Acceleration | The rate at which an object&#39;s speed is changing | . Displacement | Vector quantity that is an object&#39;s overall change in position | . Distance | How far an object has moved; positive or negative | . Vectors | Have both magnitude and direction | . Scalars | Only magnitude (no direction) | . Gravitational Constant | 9.8 m/s^2 | . Key Equations . Lab Resources . Motion in 1D Lab | Projectile Motion | . Click to view Calculators .",
-            "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/jupyter/2022/10/29/Kinematics.html",
-            "relUrl": "/jupyter/2022/10/29/Kinematics.html",
-            "date": " • Oct 29, 2022"
+            "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/jupyter/2022/10/30/Kinematics.html",
+            "relUrl": "/jupyter/2022/10/30/Kinematics.html",
+            "date": " • Oct 30, 2022"
         }
         
     
@@ -15,9 +15,9 @@
         ,"post1": {
             "title": "GUI Notebook",
             "content": "import java.awt.*; import java.awt.event.*; import javax.swing.*; import java.util.Timer; import java.util.TimerTask; // Graphical-User-Interface for Desktop in Java using Java Swing. public class MenuJFrame extends JFrame implements ActionListener { private JFrame frame; private JMenuBar menubar; private JMenu menu; private JLabel message = new JLabel(&quot;Click on Menu to select an action.&quot;); public final String[] MENUS = { // 1D Array of Menu Choices &quot;Mean and Median&quot;, &quot;Potential Energy&quot;, &quot;Fahrenheit to Celsius&quot;, }; // Statics to assist with timer and messaging, single copy (no instance) private static int delay = 20; private static int step = 1; private static String hashes = &quot;&quot;; // Constructor enables the Frame instance, the object &quot;this.frame&quot; public MenuJFrame(String title) { // Initializing Key Objects frame = new JFrame(title); menubar = new JMenuBar(); menu = new JMenu(&quot;Menu&quot;); // Initializing Menu objects and adding actions for (String mx : MENUS) { JMenuItem m = new JMenuItem(mx); m.addActionListener(this); menu.add(m); } // Adding / Connecting Objects menubar.add(menu); frame.setJMenuBar(menubar); frame.add(message); // Sets JFrame close operation to Class variable JFrame.EXIT_ON_CLOSE frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE); // set the size of window based on objects frame.setSize(300,200); // makes the frame object visible according to properties previously set frame.setVisible(true); // flow of control shifts to frame object } // event from user selecting a menu option public void actionPerformed(ActionEvent e) { // local variable to ActinEvent String selection = e.getActionCommand(); // menu selection String msg; // local variable to create response from action final String[] COLORS = {&quot;Red&quot;, &quot;Green&quot;, &quot;Blue&quot;}; // add more colors here final String start_msg = &quot;&lt;html&gt;&quot;; // html building final String end_msg = &quot;&lt;/html&gt;&quot;; final String hash = &quot;#&quot;; // run code based on the menuItem that was selected if ( selection.equals(MENUS[0]) ) { action1(start_msg, end_msg); } else if ( selection.equals(MENUS[1]) ) { public void action2(String start_msg, String end_msg) { String msg; int fahrenheit1: 60; double celsius1 = (fahrenheit1-32)*(5/9); msg = start_msg; msg += &quot;The degree in fahrenheit is &quot; + fahrenheit1 +&quot; and in celsius it is &quot;+ celsius1 +&quot;&quot;; msg += end+msg; } } else { } } public void action1(String start_msg, String end_msg) { String msg; int data1 = 1; int data2 = 2; int data3 = 3; double mean = (double) (data1 + data2 + data3) / 3; int median = data2; msg = start_msg; msg += &quot;The data is &quot; + data1 + &quot;, &quot; + data2 + &quot;, &quot; + data3 + &quot;.&lt;br&gt;The mean is &quot; + mean + &quot;. The median is &quot; + median + &quot;.&quot;; msg += end_msg; message.setText(msg); } // Driver turn over control the GUI public static void main(String[] args) { // Activates an instance of MenuJFrame class, which makes a JFrame object new MenuJFrame(&quot;Menu&quot;); } } MenuJFrame.main(null); . | public void action2(String start_msg, String end_msg) { illegal start of expression | int fahrenheit1: 60; &#39;;&#39; expected .",
-            "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/jupyter/2022/10/29/GUImenu.html",
-            "relUrl": "/jupyter/2022/10/29/GUImenu.html",
-            "date": " • Oct 29, 2022"
+            "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/jupyter/2022/10/30/GUImenu.html",
+            "relUrl": "/jupyter/2022/10/30/GUImenu.html",
+            "date": " • Oct 30, 2022"
         }
         
     
@@ -88,7 +88,7 @@
   
       ,"page3": {
           "title": "Kinematics Calculator",
-          "content": "&lt;!DOCTYPE html&gt; . Kinematics Calculator . Final Velocity Calculator &lt;/h1&gt; . Initial Velocity: Acceleration: Time: Final Velocity: Displacement Calculator &lt;/h1&gt; . Initial Velocity: Final Velocity: Time: Displacement: Baby Equation Calculator &lt;/h1&gt; . Displacement: Time: Velocity: &lt;/html&gt; .",
+          "content": "&lt;!DOCTYPE html&gt; . Kinematics Calculator . Final Velocity Calculator &lt;/h1&gt; . Initial Velocity: Acceleration: Time: Final Velocity: Displacement Calculator &lt;/h1&gt; . Initial Velocity: Final Velocity: Time: Displacement: Baby Equation Calculator &lt;/h1&gt; . Displacement: Time: Velocity: Newton&#39;s Laws Video &lt;/h1&gt; . &lt;/html&gt; . .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/kinematicscalculator/",
           "relUrl": "/kinematicscalculator/",
           "date": ""
