@@ -1,163 +1,131 @@
 ---
 layout: default
-permalink: /physics/
-title: Physics
+permalink: /planets/
+title: Planets
 search_exclude: true
 ---
 
 <!DOCTYPE html>
 
 <html lang="en">
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-<!-- <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests"> -->
 
 <head>  
     <meta charset="utf-8">  
     <title>  
-        Physics  
+        Planets  
     </title>
 </head>
 
-<style>
-
-    .dropbtn:hover, .dropbtn:focus {
-        background-color: gray;
-    }
-
-    .dropdown-content {
-        display: none;  /* hidden by default */
-        position: absolute;
-        background-color: #f1f1f1;
-        min-width: 160px;
-        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-        z-index: 1;
-    }
-
-    .dropdown-content a {
-        color: black;
-        padding: 12px 16px;
-        text-decoration: none;
-        display: block;
-    }
-
-    .dropdown-content a:hover {background-color: #ddd;}
-
-    .show {display:block;}  /* show when user clicks dropdown */
-</style>
+<!-- Create text inputs for q1, q2, r -->
 
 <body>
 
     <h1>
-        Physics
+        Planets
     </h1>
 
-    <div class="dropdown">
-        <button onclick="dropdown()" class="dropbtn">Levels</button>
-        <div id="levelDropdown" class="dropdown-content">
-            <a class="dropdown-item" href="#">Advanced</a>
-            <a class="dropdown-item" href="#">Intermediate</a>
-            <a class="dropdown-item" href="#">Basic</a>
-        </div>
-        Current level: <p id="level">Basic</p>
-    </div>
+<!-- Create div for planets -->
 
-    <div>
-        <input type="submit" value="Physics" onclick="fetchPhysics()"/>
-    </div>
-
-    <div>
-        <!-- Create table for terms, definitions, examples -->
-
-        <table id="result" style="width:100%">
-            <tr>
-                <th>Term</th>
-                <th>Definition</th>
-                <th>Example</th>
-            </tr>
-        </table>
+    <div id="planets">
 
     </div>
 
 </body>
 
 <script>
-
-    function dropdown() {
-        document.getElementById("levelDropdown").classList.toggle("show");
+    
+    function Planet(mass, radius, name) {
+        this.mass = mass;
+        this.radius = radius;
+        this.name = name;
+        this.moon = null;
     }
 
-    // Close the dropdown menu if the user clicks outside of it
-    window.onclick = function(event) {
-    if (!event.target.matches('.dropbtn')) {
-            var dropdowns = document.getElementsByClassName("dropdown-content");
-            var i;
-            for (i = 0; i < dropdowns.length; i++) {
-                var openDropdown = dropdowns[i];
-                if (openDropdown.classList.contains('show')) {
-                    openDropdown.classList.remove('show');
-                }
-            }
-        }
+    Planet.prototype.density = function() {
+        return this.mass / (4 / 3 * Math.PI * this.radius ** 3);
     }
 
-    // If the user clicks on a level, change the current level
-    $(".dropdown-item").click(function() {
-        var level = $(this).text();
-        $("#level").text(level);
-    });
+    Planet.prototype.volume = function() {
+        return 4 / 3 * Math.PI * this.radius ** 3;
+    }
 
-    // Return phsics definition
-    const settings = {
-        "async": true,
-        "crossDomain": true,
-        "url": "",  // change url based on level
-        "method": "GET",
-        "headers": {
-            "X-RapidAPI-Key": "af7e196e18msh4d482e5496c0c2ap1e17f5jsna90ba7f9f0d8",
-            "X-RapidAPI-Host": "physitionary.p.rapidapi.com"
-        }
-    };
+    Planet.prototype.surfaceArea = function() {
+        return 4 * Math.PI * this.radius ** 2;
+    }
 
-    $.ajax(settings).done(function (response) {
-        console.log(response);
-    });
+    Planet.prototype.gravAccel = function() {
+        return 6.674e-11 * this.mass / this.radius ** 2;
+    }
 
-    function fetchPhysics() {
-        console.log("Physics button clicked") // Test to see if the button works
+    Planet.prototype.gravForce = function(mass) {
+        return this.gravAccel() * mass;
+    }
 
-        var level = $("#level").text();
-        console.log(level); // Test to see if the level is correct
+    Planet.prototype.escapeVelocity = function() {
+        return Math.sqrt(2 * this.gravAccel() * this.radius);
+    }
 
-        if (level == "Basic") {
-            settings.url = "https://physitionary.p.rapidapi.com/basic";
-        } else if (level == "Intermediate") {
-            settings.url = "https://physitionary.p.rapidapi.com/intermediate";
-        } else if (level == "Advanced") {
-            settings.url = "https://physitionary.p.rapidapi.com/advanced";
-        }
+    var earth = new Planet(5.972e24, 6371e3, "Earth");
+    var moon = new Planet(7.34767309e22, 1737.1e3, "Moon");
 
-        // print term, definition, examples in table
+    earth.moon = moon;
 
-        $.ajax(settings).done(function (response) {
-            console.log(response);
+    // console.log(earth);
 
-            // get each item in array
-            for (var i = 0; i < response.length; i++) {
-                var term = response[i].term;
-                var definition = response[i].results[0]['definition'];
-                var example = response[i].results[0]['examples'][0];
+    var planets = [
+        new Planet(5.972e24, 6371e3, "Earth"),
+        new Planet(7.34767309e22, 1737.1e3, "Moon"),
+        new Planet(1.989e30, 6.957e8, "Sun"),
+        new Planet(1.898e27, 3.39e6, "Mercury"),
+        new Planet(5.683e26, 6.0518e6, "Venus"),
+        new Planet(6.39e23, 3.3895e6, "Mars"),
+        new Planet(1.898e27, 6.0518e7, "Jupiter"),
+        new Planet(5.683e26, 3.3895e7, "Saturn"),
+        new Planet(6.39e23, 6.0518e7, "Uranus"),
+        new Planet(1.898e27, 3.3895e7, "Neptune"),
+        new Planet(5.683e26, 6.0518e7, "Pluto"),
+    ];
 
-                // add each item to table
-                var table = document.getElementById("result");
-                var row = table.insertRow(i+1);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                cell1.innerHTML = term;
-                cell2.innerHTML = definition;
-                cell3.innerHTML = example;
-            }
+    function System(planets) {
+        this.planets = planets;
+        this.planets.forEach(function(planet) {
+            this[planet.name] = planet;
+        }, this);
+
+        this.moons = planets.filter(function(planet) {
+            return planet.moon;
         });
+
+        this.moons.forEach(function(moon) {
+            this[moon.name] = moon;
+        }, this);
+
     }
+
+    solar = new System(planets);
+    console.log(solar);
+
+    System.prototype._toHtml = function() {
+        var html = "<table>";
+        html += "<tr><th>Planet</th><th>Mass</th><th>Radius</th><th>Density</th><th>Volume</th><th>Surface Area</th><th>Grav. Accel.</th><th>Escape Velocity</th></tr>";
+        this.planets.forEach(function(planet) {
+            html += "<tr>";
+            html += "<td>" + planet.name + "</td>";
+            html += "<td>" + planet.mass + "</td>";
+            html += "<td>" + planet.radius + "</td>";
+            html += "<td>" + planet.density() + "</td>";
+            html += "<td>" + planet.volume() + "</td>";
+            html += "<td>" + planet.surfaceArea() + "</td>";
+            html += "<td>" + planet.gravAccel() + "</td>";
+            html += "<td>" + planet.escapeVelocity() + "</td>";
+            html += "</tr>";
+        });
+        html += "</table>";
+        return html;
+    }
+
+    // print to div planets
+    console.log(solar._toHtml())
+    document.getElementById("planets").innerHTML = solar._toHtml();
+
 </script>
