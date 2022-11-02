@@ -58,7 +58,6 @@ categories: []
         </script> 
     </div>
 </body>
-</body>
 <br>
 <br>
 <br>
@@ -75,23 +74,23 @@ categories: []
 <br>
 <body>
     <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
-        <form name="electricfield">
-            Potential difference: <input type="text" name="voltage">
+        <form name="electricfieldcalc">
+            potential: <input type="text" name="potential1">
             <br>
-            Distance 2: <input type="text" name="distance2">
+            distance: <input type="text" name="distance2">
             <br>
-            Electic Field: <input type="text" name="electricfield1">
+            E: <input type="text" name="fielde">
             <br>
-            <input type="button" value="Calculate!" onclick="findfield()" >
+            <input type="button" value="Calculate!" onclick="findField()" >
         </form>
         <script type="text/javascript">
-           function findfield()
+           function findField()
            {
-            var v1, d2, fieldfinal;
-            v1=Number(document.electricfield.voltage.value);
-            d2=Number(document.electricfield.distance2.value);
-            fieldfinal= (v1*d2);
-            document.electricfield.electricfield1.value=fieldfinal;
+            var v1, d2, Efinal;
+            v1=Number(document.electricfieldcalc.potential1.value);
+            d2=Number(document.electricfieldcalc.distance2.value);
+            Efinal = (v1*d2);
+            document.electricfieldcalc.fielde.value=Efinal;
            } 
         </script> 
     </div>
