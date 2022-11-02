@@ -171,14 +171,16 @@ window.onload = wrap_img;
 
     // Return phsics definition
     const settings = {
-        "async": true,
-        "crossDomain": true,
+        // "async": true,
+        // "crossDomain": true,
         "url": "",  // change url based on level
         "method": "GET",
         "headers": {
-            "X-RapidAPI-Key": "af7e196e18msh4d482e5496c0c2ap1e17f5jsna90ba7f9f0d8",
-            "X-RapidAPI-Host": "physitionary.p.rapidapi.com"
-        }
+            'Content-Type': 'application/json'
+        },
+        "mode": 'cors', // no-cors, *cors, same-origin
+        "cache": 'default', // *default, no-cache, reload, force-cache, only-if-cached
+        "credentials": 'same-origin', // include, same-origin, omit
     };
 
     $.ajax(settings).done(function (response) {
@@ -192,11 +194,11 @@ window.onload = wrap_img;
         console.log(level); // Test to see if the level is correct
 
         if (level == "Basic") {
-            settings.url = "https://physitionary.p.rapidapi.com/basic";
+            settings.url = "https://physics.nighthawkcoding.ml/StudiesOfPhysics/basic";
         } else if (level == "Intermediate") {
-            settings.url = "https://physitionary.p.rapidapi.com/intermediate";
+            settings.url = "https://physics.nighthawkcoding.ml/StudiesOfPhysics/intermediate";
         } else if (level == "Advanced") {
-            settings.url = "https://physitionary.p.rapidapi.com/advanced";
+            settings.url = "https://physics.nighthawkcoding.ml/StudiesOfPhysics/advanced";
         }
 
         // print term, definition, examples in table
