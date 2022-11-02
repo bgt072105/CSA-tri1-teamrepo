@@ -108,7 +108,9 @@
   
 
   
-      ,"page3": {
+
+  
+      ,"page4": {
           "title": "",
           "content": "&lt;!DOCTYPE html&gt; . Gravitational Calculators . Gravitation Calculator &lt;/h1&gt; . Mass 1: Mass 2: Radius: Fg: &lt;/html&gt; .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/gravitationcalculator/",
@@ -121,7 +123,7 @@
   
 
   
-      ,"page5": {
+      ,"page6": {
           "title": "",
           "content": "&lt;!DOCTYPE html&gt; . Kinematics Calculator . Final Velocity Calculator &lt;/h1&gt; . Initial Velocity: Acceleration: Time: Final Velocity: Displacement Calculator &lt;/h1&gt; . Initial Velocity: Final Velocity: Time: Displacement: Baby Equation Calculator &lt;/h1&gt; . Displacement: Time: Velocity: &lt;/html&gt; .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/kinematicscalculator/",
@@ -132,7 +134,7 @@
   
 
   
-      ,"page6": {
+      ,"page7": {
           "title": "",
           "content": "&lt;!DOCTYPE html&gt; . Newton&#39;s Laws Calculator . Net Force Calculator &lt;/h1&gt; . Force 1: Force 2: Force 3: Sum of Forces: Acceleration Calculator&lt;/h1&gt; . Net force: Mass of object: Acceleration: Newton&#39;s Law Video &lt;/h1&gt; . &lt;/html&gt; .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/newtonscalculator/",
@@ -166,7 +168,7 @@
   
 
   
-      ,"page16": {
+      ,"page17": {
           "title": "",
           "content": "Sitemap: {{ “sitemap.xml” | absolute_url }} | .",
           "url": "https://bgt072105.github.io/CSA-tri1-teamrepo/robots.txt",
