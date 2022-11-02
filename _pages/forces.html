@@ -58,4 +58,42 @@ categories: []
         </script> 
     </div>
 </body>
+</body>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<h1> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+    Electric Field Calculator </h1>
+    </p>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="electricfield">
+            Potential difference: <input type="text" name="voltage">
+            <br>
+            Distance 2: <input type="text" name="distance2">
+            <br>
+            Electic Field: <input type="text" name="electricfield1">
+            <br>
+            <input type="button" value="Calculate!" onclick="findfield()" >
+        </form>
+        <script type="text/javascript">
+           function findfield()
+           {
+            var v1, d2, fieldfinal;
+            v1=Number(document.electricfield.voltage.value);
+            d2=Number(document.electricfield.distance2.value);
+            fieldfinal= (v1*d2);
+            document.electricfield.electricfield.value=fieldfinal;
+           } 
+        </script> 
+    </div>
+</body>
 </html>
