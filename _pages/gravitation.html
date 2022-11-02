@@ -1,0 +1,59 @@
+---
+layout: default
+permalink: /gravitationcalculator/
+title: Gravitation Calculators
+search_exclude: false
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Gravitational Calculators </title>
+    <style>
+        title {
+            display: "Gravitation Calculator";
+            font-family: 'Lucida Sans';
+        }
+        input {
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Lucida Sans';
+        }
+        label {
+            font-weight: bold;
+            font-family: 'Lucida Sans';
+    
+        }
+    </style>
+</head>
+<h1> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+    Gravitation Calculator </h1>
+    </p>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="gravitationalforce">
+            Mass 1: <input type="text" name="mass11">
+            <br>
+            Mass 2: <input type="text" name="mass22">
+            <br>
+            Radius: <input type="text" name="radius1">
+            <br>
+            Fg: <input type="text" name="forceg">
+            <br>
+            <input type="button" value="Calculate!" onclick="findForce()" >
+        </form>
+        <script type="text/javascript">
+           function findForce()
+           {
+            var m11, m22, r1, gsum;
+            m11=Number(document.gravitationalforce.mass11.value);
+            m22=Number(document.gravitationalforce.mass22.value);
+            r1=Number(document.gravitationalforce.radius1.value);
+            forcegravity=((6.67e-11)*(m11*m22))/(r1*r1);
+            document.gravitationalforce.forceg.value=forcegravity;
+           } 
+        </script> 
+    </div>
+</body>
+</html>
