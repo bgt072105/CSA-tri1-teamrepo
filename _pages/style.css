@@ -1,84 +1,112 @@
-/* CSS Reset */
-*{
-    margin: 0;
-    padding: 0;
-}
-
-/* Sky Styling */
-.sky {
-    width: 100vw;
+html{
+    font-size:20px;
+    margin:0;
+    background:linear-gradient(45deg, black, #92929200);
     height: 100vh;
-    background-image: url(sky.jpeg);
-    background-repeat: no-repeat;
-    background-size: cover;
-    position: absolute;
-}
-
-/* Tree Styling and positioning */
-.tree {
-    height: 100vh;
-    background-image: url(tree-removebg-preview\ \(1\).png);
-    background-repeat:no-repeat;
-    background-size: cover;
-}
-
-/* Track Styling and positioning */
-.track {
-    background-image: url(track.jpeg);
+    }
+  body{margin: 0px;overflow: hidden;}
+#main{margin-top: 12em;}
+#road{
+    background: url('../image/building.png');
+    height: 253px; 
+    width: 1379px;
+    z-index: -10;
+    top: 14em;
+    background-position: 0px 0px;
     background-repeat: repeat-x;
+    animation: build 100s linear infinite;
     position: absolute;
-    bottom: 0px;
-    width: 1000vw;
-    height: 20vh;
-    animation: trackanimation 6s linear infinite;
-}
-
-/* Car Styling and positioning */
-.car {
-    background-image: url(car-removebg-preview.png);
-    background-repeat: no-repeat;
-    background-size: cover;
-    width: 17rem;
-    height: 4.699rem;
-    position: absolute;
-    bottom: 77px;
-    left: 396px;
-}
-
-/* Wheel's Styling and positioning */
-.wheel {
-    position: absolute;
-    animation: wheelanimation linear .6s infinite;
-}
-.wheel1 {
-    background-image: url(wheel1-removebg-preview.png);
-    background-size: contain;
-    background-repeat: no-repeat;
-    width: 46px;
-    height: 49px;
-    bottom: 71px;
-    left: 570px;
-}
-.wheel2 {
-    background-image: url(wheel2-removebg-preview.png);
-    background-size: cover;
-    background-repeat: no-repeat;
-    width: 43px;
-    height: 44px;
-    bottom: 77px;
-    left: 433px;
-}
-
-/* Rotation of the wheels */
-@keyframes wheelanimation{
-    100% {
-        transform: rotate(360deg);
     }
+
+
+   @keyframes  build {
+        from { background-position: 0 0; }
+        to { background-position: 100% 0; }
+    }
+    
+#moon {
+    width: 6em;
+    height: 6em;
+    border-radius: 50%;
+    box-shadow: 30px 10px 0 #F7F8E0;
+    margin-top: -8em;
+    margin-left: 50%;
+    position: absolute;
+    z-index: -19;
+    }
+
+#sky{
+  height: 240px;
+    width: 100%; 
+    background: url(../image/road.png);
+    bottom:0px;
+    background-size: auto 245px;
+     background-position: 0px 0px;
+    background-repeat: repeat-x;
+    animation: build 15s linear infinite;
+    position: absolute;
+
+    }
+    .car{
+      width: 200px;
+      height: 100px;
+      background: url(../image/car.png);
+    left: 140px;
+    bottom: 70px;
+    position: absolute;
+    }
+.car:after{
+  content: '';
+  height: 35px;
+  width: 36px;
+  background: url(../image/wheel-1.png);
+  position: absolute;
+  top: 63px;
+    left: 18px;
+    animation: rotateWheel 0.7s infinite linear;
+}
+.car:before{
+  content: '';
+  height: 35px;
+  width: 36px;
+  background: url(../image/wheel-1.png);
+  position: absolute;
+  top: 63px;
+    left: 147px;
+    animation: rotateWheel 0.7s infinite linear;
 }
 
-/* Moving the track backwards */
-@keyframes trackanimation {
-    100% {
-        transform: translate(-500vw);
-    }
+     @keyframes rotateWheel {
+  from {transform: rotate(0deg);}
+  to {transform: rotate(360deg);}
+} 
+
+.lamp {
+  content: "";
+  display: block;
+  position: absolute;
+  width: 60px;
+  bottom: 98px;
+  left: 303px;
+  transform: rotateZ(269deg);
+  border-bottom: 30px solid transparent;
+  border-radius: 50%;
+  z-index: 2;
+}
+
+
+.lamp:after {
+  content: "";
+  display: block;
+  position: absolute;
+      width: 10px;
+    height: 18px;
+    top: -163px;
+    left: -134px;
+  border-top: 150px solid transparent;
+  border-bottom: 2180px solid rgba(255, 255, 255, .4);
+  border-left: 160px solid transparent;
+  border-right: 160px solid transparent;
+  z-index: 1;
+  transform: rotateY(61deg);
 }
