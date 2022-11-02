@@ -146,20 +146,24 @@ search_exclude: true
 
             // get each item in array
             for (var i = 0; i < response["obj"].length; i++) {
-                var term = response["obj"][i].term;
-                var definition = response["obj"][i].results[0]['definition'];
-                var example = response["obj"][i].results[0]['examples'][0];
-                console.log(term);
+                try {
+                    var term = response["obj"][i].term;
+                    var definition = response["obj"][i].results[0]['definition'];
+                    var example = response["obj"][i].results[0]['examples'][0];
+                    console.log(term);
 
-                // add each item to table
-                var table = document.getElementById("result");
-                var row = table.insertRow(i+1);
-                var cell1 = row.insertCell(0);
-                var cell2 = row.insertCell(1);
-                var cell3 = row.insertCell(2);
-                cell1.innerHTML = term;
-                cell2.innerHTML = definition;
-                cell3.innerHTML = example;
+                    // add each item to table
+                    var table = document.getElementById("result");
+                    var row = table.insertRow(i+1);
+                    var cell1 = row.insertCell(0);
+                    var cell2 = row.insertCell(1);
+                    var cell3 = row.insertCell(2);
+                    cell1.innerHTML = term;
+                    cell2.innerHTML = definition;
+                    cell3.innerHTML = example;
+                } catch (error) {
+                    console.error(error);
+                }
             }
         });
     }
