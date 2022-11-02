@@ -1,0 +1,61 @@
+---
+layout: default
+permalink: /electricforcescalculator/
+title:
+search_exclude: false
+toc: false
+categories: []
+---
+<!DOCTYPE html>
+<html>
+<head>
+    <title> Electric Forces Calculators </title>
+    <style>
+        title {
+            display: "Electric Forces Calculator";
+            font-family: 'Lucida Sans';
+        }
+        input {
+            padding: 5px;
+            border-radius: 4px;
+            font-family: 'Lucida Sans';
+        }
+        label {
+            font-weight: bold;
+            font-family: 'Lucida Sans';
+    
+        }
+    </style>
+</head>
+<h1> 
+    <p style="font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif"> 
+    Coulomb's Law Calculator  </h1>
+    </p>
+<br>
+<body>
+    <div style="margin: auto; width: 300px; background-color: #2481ce; float:left; padding: 10px; font-style: Lucida Sans;">
+        <form name="electricforce">
+            Charge 1: <input type="text" name="charge1">
+            <br>
+            Charge 2: <input type="text" name="charge2">
+            <br>
+            Distance: <input type="text" name="distance1">
+            <br>
+            Fe: <input type="text" name="forcee">
+            <br>
+            <input type="button" value="Calculate!" onclick="findForceE()" >
+        </form>
+        <script type="text/javascript">
+           function findForceE()
+           {
+            var c1, c2, d1, esum;
+            c1=Number(document.electricforce.charge1.value);
+            c2=Number(document.electricforce.charge2.value);
+            d1=Number(document.electricforce.distance1.value);
+            esum = (9e9)*((c1*c2)/d1);
+            document.electricforce.forcee.value=esum;
+           } 
+        </script> 
+    </div>
+</body>
+</html>
